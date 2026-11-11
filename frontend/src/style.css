@@ -1,0 +1,223 @@
+/* Общие стили сайта */
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #f1f3f9;
+  color: #1f2937;
+}
+
+/* Ширина контента и отступы */
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 16px 40px;
+}
+
+/* Шапка */
+.header {
+  background: #ffffff;
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 16px;
+  font-weight: 700;
+  font-size: 17px;
+  color: #4f46e5;
+  white-space: nowrap;
+}
+
+.header .p-menubar-root-list {
+  flex-wrap: nowrap;
+}
+
+.header .p-menuitem-text {
+  white-space: nowrap;
+}
+
+.logo i {
+  font-size: 22px;
+}
+
+.menu-active > .p-menuitem-content {
+  background: #eef2ff;
+}
+
+.menu-active .p-menuitem-text,
+.menu-active .p-menuitem-icon {
+  color: #4f46e5 !important;
+  font-weight: 600;
+}
+
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Карточки */
+.p-card {
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.p-card .p-card-title {
+  font-size: 20px;
+}
+
+/* Сетка полей формы: колонки одинаковой ширины */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  align-items: end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+/* Все поля ввода во всю ширину колонки */
+.field > .p-password .p-icon-field,
+.field > .p-dropdown,
+.field > .p-calendar,
+.field > .p-inputtext,
+.field > .p-password,
+.field > .p-button {
+  width: 100%;
+}
+
+/* Блок выбора времени */
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0 12px;
+  padding-top: 16px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.section-title b {
+  font-size: 16px;
+}
+
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.dot.free { background: #22c55e; }
+.dot.busy { background: #d1d5db; }
+
+.slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 10px;
+}
+
+.empty {
+  text-align: center;
+  padding: 24px;
+  color: #9ca3af;
+}
+
+.empty i {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* Страница входа */
+.login-wrap {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #eef2ff 0%, #f1f3f9 60%);
+}
+
+.login-box {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-head {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.login-head i {
+  font-size: 36px;
+  color: #4f46e5;
+}
+
+.login-head h2 {
+  margin: 8px 0 4px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hint {
+  color: #6b7280;
+  font-size: 13px;
+  text-align: center;
+  margin: 4px 0 0;
+}
+
+/* Таблицы */
+.p-datatable .p-datatable-thead > tr > th {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+@media (max-width: 640px) {
+  .logo span { display: none; }
+  .user-name { display: none; }
+}
+
+.legend > span {
+  white-space: nowrap;
+}
+
+.section-title {
+  flex-wrap: wrap;
+  gap: 8px;
+}
